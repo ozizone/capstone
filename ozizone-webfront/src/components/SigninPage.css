@@ -1,0 +1,52 @@
+/* SigninPage.css */
+.signin-container {
+  background-color: #d1a3ff; /* 보라색 배경 */
+  height: 100vh; /* 전체 화면 높이 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
+.signin-form {
+  background-color: rgba(255, 255, 255, 0.8); /* 약간 투명한 흰색 배경 */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.signin-form h1 {
+  margin-bottom: 20px; /* 제목과 입력창 간격 */
+}
+
+.signin-form label {
+  display: block;
+  text-align: left; /* 라벨 왼쪽 정렬 */
+  margin-bottom: 5px;
+}
+
+.signin-form input {
+  display: block;
+  width: 100%;
+  margin: 5px 0 15px 0; /* 입력창 간격 */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signin-form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #6a5acd; /* 보라색 버튼 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signin-form button:hover {
+  background-color: #5a4cad; /* 버튼 호버 시 색상 변경 */
+}

@@ -1,21 +1,26 @@
 /* module 불러오기 */
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth"; // Firebase 로그아웃 메서드
+import { auth } from "../index"; // index.js에서 Firebase 인증 객체 가져오기
 import "./MainPage.css";
 
+const drum_icon = "https://firebasestorage.googleapis.com/v0/b/capstone-8763b.appspot.com/o/drum_icon.png?alt=media";
 const MainPage = () => {
   const navigate = useNavigate("");
 
-  // 메인페이지 기능(연습 or 게임) 구현하기 (백엔드 연동 후)
-  // 버튼 클릭 후 연습 or 게임 페이지로 이동함 -> 백엔드 연동 후 개발 완료
-  // ...
-
-  // 로그아웃 버튼 클릭 시, LoginPage로 이동
-  // 아래 함수 추후 구현 예정 (백엔드 연동 후)
+  // 로그아웃 버튼 클릭 시, Firebase 로그아웃 처리 후 LoginPage로 이동
   const handleLogout = () => {
-    // 여기에 로그아웃 관련 처리 구현하기 ex) 토큰 삭제
-    // ...
-    navigate("/login"); // LoginPage로 이동
+    signOut(auth)
+      .then(() => {
+        // 로그아웃 성공
+        console.log("로그아웃 성공");
+        navigate("/login"); // 로그인 페이지로 이동
+      })
+      .catch((error) => {
+        // 로그아웃 실패 처리
+        console.error("로그아웃 실패:", error);
+      });
   };
 
   // 마이페이지 버튼을 클릭했을 때 마이페이지로 이동
@@ -34,7 +39,7 @@ const MainPage = () => {
       {/* 드럼 메인 아이콘 & 메인 타이틀 */}
       <div className="main_icon">
         <img
-          src={require("../images/drum_icon.png")}
+          src={drum_icon}
           alt="Main_drum"
           className="main_icon"
         />

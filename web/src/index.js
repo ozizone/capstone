@@ -10,13 +10,13 @@ import { getAuth } from "firebase/auth";
 
 // Firebase 설정 정보 (새로운 프로젝트에 맞게 업데이트)
 const firebaseConfig = {
-  apiKey: "AIzaSyCtt85_XGP1JZdjKBMNCjw60rv4786r1mk",
-  authDomain: "capstone-8763b.firebaseapp.com",
-  projectId: "capstone-8763b",
-  storageBucket: "capstone-8763b.appspot.com",
-  messagingSenderId: "885711584937",
-  appId: "1:885711584937:web:7ddc20fc8b4d68e5e833b8",
-  measurementId: "G-M0DS15D0TP"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Firebase 초기화 (중복 방지)

@@ -1,6 +1,7 @@
 /* 전체 웹페이지 옵션 */
 body,
 html {
+  overflow: hidden;
   height: 100%; /* 웹페이지 전체 높이 = 100% 꽉 */
   margin: 0; /* 여백 아예 제거 (0%) */
   font-family: Arial; /* 글꼴 */

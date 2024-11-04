@@ -10,6 +10,8 @@ import SignupPage from "./components/SignupPage";
 import MainPage from "./components/MainPage";
 import SelectPage from "./components/SelectPage";
 import MyPage from "./components/MyPage";
+// App.js | 2024.10.30 '연습하기' 페이지 (/practice) 추가
+import PracticePage from "./components/Practice/PracticePage";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/main" element={<MainPage />} />
         <Route path="/select" element={<SelectPage />} />
         <Route path="/mypage" element={<MyPage />} />
+        {/* App.js | 2024.10.30 '연습하기' 페이지 (/practice) 추가 */}
+        <Route path="/practice" element={<PracticePage />} />
       </Routes>
     </Router>
   );

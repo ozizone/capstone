@@ -41,11 +41,13 @@ const SignupPage = () => {
           .catch((error) => {
             console.error("닉네임 업데이트 오류:", error);
             setErrorMessage("닉네임 업데이트에 실패했습니다.");
+            
           });
       })
       .catch((error) => {
         console.error("회원가입 실패:", error);
         setErrorMessage("회원가입에 실패했습니다.");
+       
       });
   };
 

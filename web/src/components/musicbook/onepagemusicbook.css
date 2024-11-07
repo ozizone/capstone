@@ -1,0 +1,517 @@
+/* src/components/musicbook/onepagemusicbook.css */
+/* 마디별 네모박스로 연주할 부분 표시해주는 css 코드 */
+// onepagemusicbook.css | 2024.10.30 '연습하기' 페이지에 "한페이지가될수있게" 악보 기능 추가 (.css 디자인 코드)
+// /practice 페이지를 구성하는 PracticePage.js가 호출하여 사용하는 코드를 꾸며주는 .css 코드 (악보 기능 추가해줌)
+
+.musicbook {
+  position: relative;
+}
+
+.imagebox_field {
+  position: relative;
+  display: inline-block;
+}
+
+.sheet_image {
+  width: 100%;
+  height: auto;
+}
+
+.red_box {
+  position: absolute;
+  border: 3px solid red;
+  pointer-events: none;
+}
+
+/* 각 마디에 맞는 위치와 크기를 설정해주는 옵션 */
+.measure2-1 {
+  top: 100px;
+  left: 87px;
+  width: 170px;
+  height: 110px;
+}
+
+.measure2-2 {
+  top: 100px;
+  left: 255px;
+  width: 150px;
+  height: 110px;
+}
+
+.measure2-3 {
+  top: 100px;
+  left: 400px;
+  width: 150px;
+  height: 110px;
+}
+
+.measure2-4 {
+  top: 100px;
+  left: 543px;
+  width: 150px;
+  height: 110px;
+}
+
+/* page2 */
+.measure2-5 {
+  top: 10px;
+  left: 50px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-6 {
+  top: 10px;
+  left: 217px;
+  width: 165px;
+  height: 112px;
+}
+
+.measure2-7 {
+  top: 10px;
+  left: 374px;
+  width: 165px;
+  height: 112px;
+}
+
+.measure2-8 {
+  top: 10px;
+  left: 530px;
+  width: 165px;
+  height: 112px;
+}
+
+/* page3 */
+.measure2-9 {
+  top: 10px;
+  left: 53px;
+  width: 166px;
+  height: 112px;
+}
+
+.measure2-10 {
+  top: 10px;
+  left: 218px;
+  width: 165px;
+  height: 112px;
+}
+
+.measure2-11 {
+  top: 10px;
+  left: 375px;
+  width: 168px;
+  height: 112px;
+}
+
+.measure2-12 {
+  top: 10px;
+  left: 530px;
+  width: 168px;
+  height: 112px;
+}
+
+/* page4 */
+.measure2-13 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-14 {
+  top: 10px;
+  left: 215px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-15 {
+  top: 10px;
+  left: 369px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-16 {
+  top: 10px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page5 (가사시작...솔직히~) */
+.measure2-17 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-18 {
+  top: 10px;
+  left: 215px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-19 {
+  top: 10px;
+  left: 372px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-20 {
+  top: 10px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page6 */
+.measure2-21 {
+  top: 8px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-22 {
+  top: 8px;
+  left: 213px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-23 {
+  top: 8px;
+  left: 370px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-24 {
+  top: 8px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page7 */
+.measure2-25 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-26 {
+  top: 10px;
+  left: 215px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-27 {
+  top: 10px;
+  left: 372px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-28 {
+  top: 10px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page8 */
+.measure2-29 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-30 {
+  top: 10px;
+  left: 220px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-31 {
+  top: 10px;
+  left: 380px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-32 {
+  top: 10px;
+  left: 535px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page9 */
+.measure2-33 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-34 {
+  top: 10px;
+  left: 220px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-35 {
+  top: 10px;
+  left: 377px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-36 {
+  top: 10px;
+  left: 535px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page10 */
+.measure2-37 {
+  top: 10px;
+  left: 55px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-38 {
+  top: 10px;
+  left: 220px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-39 {
+  top: 10px;
+  left: 377px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-40 {
+  top: 10px;
+  left: 535px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page11 */
+.measure2-41 {
+  top: 12px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-42 {
+  top: 12px;
+  left: 218px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-43 {
+  top: 12px;
+  left: 375px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-44 {
+  top: 12px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page12 */
+.measure2-45 {
+  top: 12px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-46 {
+  top: 12px;
+  left: 218px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-47 {
+  top: 12px;
+  left: 375px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-48 {
+  top: 12px;
+  left: 533px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page13 */
+.measure2-49 {
+  top: 13px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-50 {
+  top: 13px;
+  left: 215px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-51 {
+  top: 13px;
+  left: 372px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-52 {
+  top: 13px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page14 */
+.measure2-53 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-54 {
+  top: 10px;
+  left: 215px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-55 {
+  top: 10px;
+  left: 372px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-56 {
+  top: 10px;
+  left: 530px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page15 */
+.measure2-57 {
+  top: 12px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-58 {
+  top: 12px;
+  left: 218px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-59 {
+  top: 12px;
+  left: 375px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-60 {
+  top: 12px;
+  left: 533px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page16 */
+.measure2-61 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-62 {
+  top: 10px;
+  left: 221px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-63 {
+  top: 10px;
+  left: 378px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-64 {
+  top: 10px;
+  left: 533px;
+  width: 170px;
+  height: 112px;
+}
+
+/* page17 (마지막) */
+.measure2-65 {
+  top: 10px;
+  left: 52px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-66 {
+  top: 10px;
+  left: 221px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-67 {
+  top: 10px;
+  left: 378px;
+  width: 170px;
+  height: 112px;
+}
+
+.measure2-68 {
+  top: 10px;
+  left: 533px;
+  width: 170px;
+  height: 112px;
+}

@@ -1,43 +1,54 @@
-// GamePage.js
-
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const GamePage = () => {
-  const [pressCount, setPressCount] = useState(0);
+  const [kickCount, setKickCount] = useState(0);
+  const [cymbalCount, setCymbalCount] = useState(0);
+  const [highTomCount, setHighTomCount] = useState(0);
+ // eslint-disable-next-line no-unused-vars
+const [port, setPort] = useState(null);
 
-  useEffect(() => {
-    // 웹소켓 서버 연결 설정
-    const socket = new WebSocket("ws://localhost:3002"); // 3002 포트로 연결
 
-    // 웹소켓이 연결되었을 때
-    socket.onopen = () => {
-      console.log("Connected to WebSocket server");
-    };
-
-    // 서버에서 메시지를 받을 때 실행
-    socket.onmessage = (event) => {
-      const count = parseInt(event.data.trim(), 10); // 받은 데이터를 숫자로 변환
-      if (!isNaN(count)) {
-        setPressCount(count); // 버튼 누름 횟수 업데이트
-      } else {
-        console.warn("Received invalid data:", event.data); // 디버그용 로그
+  const connectToSerial = async () => {
+    try {
+      const selectedPort = await navigator.serial.requestPort();
+      await selectedPort.open({ baudRate: 9600 });
+      console.log("Connected to serial port");
+  
+      // 데이터 읽기
+      const reader = selectedPort.readable.getReader();
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) {
+          reader.releaseLock();
+          break;
+        }
+        const data = new TextDecoder().decode(value);
+        processSerialData(data);
       }
-    };
+    } catch (error) {
+      console.error("Error connecting to serial port:", error);
+    }
+  };
+  
 
-    // 웹소켓 연결이 종료될 때 실행
-    socket.onclose = () => {
-      console.log("Disconnected from WebSocket server");
-    };
-
-    return () => {
-      socket.close(); // 컴포넌트가 언마운트될 때 연결 종료
-    };
-  }, []);
+  const processSerialData = (data) => {
+    // 받은 데이터 처리
+    if (data.includes("Kick Count:")) {
+      setKickCount((prev) => prev + 1);
+    } else if (data.includes("Cymbal Count:")) {
+      setCymbalCount((prev) => prev + 1);
+    } else if (data.includes("High Tom Count:")) {
+      setHighTomCount((prev) => prev + 1);
+    }
+  };
 
   return (
     <div>
       <h1>Game Page</h1>
-      <h2>Button Press Count: {pressCount}</h2> {/* 버튼 누름 횟수 표시 */}
+      <button onClick={connectToSerial}>Connect to Arduino</button>
+      <h2>Kick Count: {kickCount}</h2>
+      <h2>Cymbal Count: {cymbalCount}</h2>
+      <h2>High Tom Count: {highTomCount}</h2>
     </div>
   );
 };

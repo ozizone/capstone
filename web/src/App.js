@@ -13,6 +13,9 @@ import MyPage from "./components/MyPage";
 // App.js | 2024.10.30 '연습하기' 페이지 (/practice) 추가
 import PracticePage from "./components/Practice/PracticePage";
 
+/* GamePage  경로 임시 추가 */
+import GamePage from "./components/GamePage"
+
 function App() {
   return (
     <Router>
@@ -25,6 +28,9 @@ function App() {
         <Route path="/mypage" element={<MyPage />} />
         {/* App.js | 2024.10.30 '연습하기' 페이지 (/practice) 추가 */}
         <Route path="/practice" element={<PracticePage />} />
+
+        {/* GamePage  경로 임시 추가 */}
+        <Route path="/game" element={<GamePage />} />
       </Routes>
     </Router>
   );

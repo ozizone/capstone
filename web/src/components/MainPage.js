@@ -33,6 +33,11 @@ const MainPage = () => {
     navigate("/select"); // SelectPage로 이동
   };
 
+  // 게임하기 버튼을 눌렀을 때 GamePage로 
+  const handleGame= ()=>{
+    navigate("/game"); // GamePage로 이동
+  }
+
   /* UI 구성 */
   return (
     <div className="mainpage">
@@ -51,7 +56,8 @@ const MainPage = () => {
         <button className="main_practice_button" onClick={handlePractice}>
           연습하기
         </button>
-        <button className="main_game_button">게임하기</button>
+
+        <button className="main_game_button" onClick={handleGame}>게임하기</button>
       </div>
       {/* 메인페이지 링크(URL) 전체 묶음 폼 */}
       <div className="mainpage_link_form">
